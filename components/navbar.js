@@ -10,15 +10,15 @@ const Navbar = (props) => {
               Uju the Storyteller
             </p>
               
-            <Button style={{color:'white'}} href='/' className='text-white md:text-md hover:text-blue-500 md:mr-0   w-[70px] md:mx-4 h-[40px] bg-[#9BAFCD] p-2'>
+            <Button style={{color:'white'}} href='/' className='text-white md:text-md md:mr-0   w-[70px] md:mx-4 h-[40px] bg-[#9BAFCD] p-2'>
               Home
             </Button>
 
-            <Button style={{color:'white'}} href='/main_blog' className='text-white md:text-md hover:text-blue-500 md:mr-0   w-[70px] md:mx-4 h-[40px] bg-[#9BAFCD] p-2'>
+            <Button style={{color:'white'}} href='/main_blog' className='text-white md:text-md md:mr-0   w-[70px] md:mx-4 h-[40px] bg-[#9BAFCD] p-2'>
               Blog
             </Button>
 
-            <Button href='/' style={{color:'white'}} onClick={books} className='text-white md:text-md hover:text-blue-500 md:mr-0   w-[70px] md:mx-4 h-[40px] bg-[#9BAFCD] p-2'>
+            <Button href='/' style={{color:'white'}} onClick={books} className='text-white md:text-md md:mr-0   w-[70px] md:mx-4 h-[40px] bg-[#9BAFCD] p-2'>
               Books
             </Button>
 
