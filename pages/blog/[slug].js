@@ -39,13 +39,13 @@ const query = qs.stringify({
 useEffect(()=>{
   Axios.get(`https://storyteller-strapi.herokuapp.com/api/articles?${query}`)
   .then((res)=>{
-    setSimilar(res.data.data)
+    setSimilar(res.data.data.slice(0,3))
   })
   console.log(post.id)
 },[])
 
 
-  const {attributes:data}=post
+  // const {attributes:data}=post
 
   // const getImage=(src)=>{
   //   if(post){
@@ -66,15 +66,15 @@ useEffect(()=>{
   <div className='bg-[#9BAFCD] md:px-10 md:p-6 md:col-span-3 rounded-lg'>
   
   <div className='justify-center grid'>
-      <img className='w-[500px] h-[200px] md:w-[950px] md:h-[450px]' src={`http://localhost:1337${data?.image.data.attributes.url}`} />
+      <img className='w-[500px] h-[200px] md:w-[950px] md:h-[450px]' src={`https://storyteller-strapi.herokuapp.com${post?.attributes?.image.data.attributes.url}`} />
   </div>
 
   <h1 className='md:text-3xl text-2xl font-bold m-4'>
-    {data?.title}
+    {post?.attributes?.title}
   </h1>
 
   <div className='text-xl m-6'>
-    {data?.content}
+    {post?.attributes?.content}
   </div>
   
   <Divider className='my-6' style={{backgroundColor:'#5274A6'}} variant='fullWidth' />
@@ -208,7 +208,7 @@ useEffect(()=>{
             </p>
         {
                similar ?
-               similar.map((data)=>(
+               similar?.map((data)=>(
                 <div className='mb-10 mt-4 grid'>
                   <Card title={data.attributes.title} body={data.attributes.description} id={data.id} image={data.attributes.image.data.attributes.url} slug={data.attributes.slug} date={data.attributes.publishedAt} />
                 </div>
