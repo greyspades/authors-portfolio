@@ -58,7 +58,7 @@ export default function Home({posts}) {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Uju the storyteller</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
